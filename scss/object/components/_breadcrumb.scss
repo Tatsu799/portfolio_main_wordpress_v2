@@ -1,0 +1,16 @@
+@use "../../global" as *;
+
+.__breadcrumb {
+  width: 100%;
+  margin: 0 0 10% 0;
+  z-index: 100;
+  @include mq(sp_1) {
+    font-size: 0.7rem;
+  }
+  a:nth-of-type(1) {
+    padding-right: 0.35rem;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
+}

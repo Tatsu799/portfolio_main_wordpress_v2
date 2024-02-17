@@ -1,0 +1,543 @@
+@use "../../global" as *;
+
+.top {
+  &-wrapper {
+    width: 100%;
+    height: 100%;
+    &__ttl {
+      width: 100%;
+      height: 100vh;
+      background-color: #fff;
+      text-align: center;
+      h1 {
+        position: relative;
+        content: "";
+        top: 45%;
+        font-family: $f-top;
+        font-size: 3rem;
+        font-weight: 200;
+        @include mq(sp_1) {
+          font-size: 2rem;
+        }
+        @include mq(sp_2) {
+          font-size: 1.5rem;
+        }
+      }
+      p {
+        position: relative;
+        top: 45%;
+        font-size: 1rem;
+        font-weight: 700;
+        @include mq(sp_2) {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+//Works-top
+.works-top {
+  background-color: $main-blue;
+  &-wrapper {
+    height: 100%;
+    &__ttl {
+      color: #fff;
+      .ttl-main {
+        border-bottom: 3px solid #fff;
+      }
+      .ttl-main::before {
+        color: rgba(51, 51, 51, 0.5);
+      }
+    }
+    &__con {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      @include mq(tab) {
+        display: block;
+      }
+      &__box {
+        width: 100%;
+        height: 100%;
+        @include mq(tab) {
+          width: 100%;
+          padding-top: 5%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+              object-fit: cover;
+          aspect-ratio: 2 / 1;
+          -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+                  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+        }
+        &__txt {
+          p {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            @include mq(pc_max) {
+              font-size: 1rem;
+            }
+            @include mq(sp_2) {
+              font-size: 1rem;
+            }
+            span {
+              position: relative;
+              top: -5px;
+              display: inline-block;
+              width: 10%;
+              margin-right: 15px;
+              background-color: #fff;
+              height: 1px;
+            }
+          }
+        small {
+          font-size: 0.8rem;
+          color: #fff;
+          @include mq(sp_1) {
+            position: relative;
+            top: -5px;
+            left: 0;
+          }
+        }
+      }
+    }
+    &__btn {
+      display: block;
+      text-align: right;
+      padding: 10% 0 10% 0;
+      @include mq(tab) {
+          padding: 5% 0 10% 0; 
+      }
+      p {
+        color: #fff;
+        display: inline;
+        position: relative;
+        width: 100%;
+        font-size: 1.3rem;
+        font-weight: 700;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        &::after {
+          position: absolute;
+          content: "";
+          top: 30px;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s;
+          -webkit-transform: scale(0,0);
+              -ms-transform: scale(0,0);
+                  transform: scale(0,0);
+          background: #fff;
+        }
+        &:hover {
+          opacity: 0.7;
+          -webkit-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover::after {
+          -webkit-transform: scale(1,1);
+              -ms-transform: scale(1,1);
+                  transform: scale(1,1);
+          }
+        }
+      }
+    }
+  }
+}
+
+//ServiceTop
+.service-top {
+  padding: 0 0 8% 0;
+  @include mq(tab) {
+    padding: 0 0 0 0;
+  }
+  &-wrapper {
+    height: 100%;
+    &__ttl {
+      color: $main-blue;
+      p {
+        color: $main-blue;
+      }
+      .ttl-main {
+        border-bottom: 3px solid $main-blue;
+        @include mq(sp_2) {
+          width: 14rem;
+      }
+    }
+  }
+  &__con {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 0 0 10% 0; 
+    @include mq(tab) {
+      display: block;
+    }
+    &__box {
+      width: 100%;
+      height: 100%;
+      &__top {
+        width: 280px;
+        height: 280px;
+        border-radius: 180px;
+        background-color: rgba(0, 88, 128, 0.3);
+        margin: 0 auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        @include mq(pc_max) {
+          width: 230px;
+          height: 230px;
+        }
+        @include mq(tab) {
+          width: 300px;
+          height: 300px;
+          margin-top: 10%;
+        }
+        @include mq(sp_2) {
+          width: 230px;
+          height: 230px;
+        }
+        &__img {
+          width: 8rem;
+          height: 8rem;
+          @include mq(pc_max) {
+            width: 7rem;
+            height: 7rem;
+          }
+          @include mq(tab) {
+            width: 8rem;
+            height: 8rem;
+          }
+          @include mq(tab) {
+            width: 7rem;
+            height: 7rem;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      &__ttl {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 5% 0;
+        @include mq(sp_2) {
+            font-size: 1.3rem;
+        }
+      }
+      &__txt {
+        width: 90%;
+        margin: 0 auto;
+        @include mq(tab) {
+            width: 100%;
+            margin-bottom: 10%;
+        }
+      }
+    }
+    &__btn {
+      display: block;
+      text-align: right;
+      padding: 10% 0 10% 0; 
+      p {
+        color: $main-blue;
+        display: inline;
+        position: relative;
+        width: 100%;
+        font-size: 1.3rem;
+        font-weight: 700;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+          &::after {
+            position: absolute;
+            content: "";
+            top: 30px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            -webkit-transform: scale(0,0);
+                -ms-transform: scale(0,0);
+                    transform: scale(0,0);
+            background: $main-blue;
+          }
+          &:hover {
+            opacity: 0.7;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+          }
+          &:hover::after {
+            -webkit-transform: scale(1,1);
+                -ms-transform: scale(1,1);
+                    transform: scale(1,1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.news-top {
+  &-wrapper {
+    position: relative;
+    &__ttl {
+      width: 100%;
+      position: relative;
+      .ttl {
+        color: $main-blue;
+      }
+      .ttl-main {
+        border-bottom: 3px solid $main-blue;
+      }
+    }
+    &__con {
+      &__ttl {
+        font-size: 2rem;
+        color: $main-blue;
+      }
+      &__cont {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+                align-items: baseline;
+        width: 80%;
+        padding: 3% 0 1% 0;
+        margin: 0 auto;
+        border-bottom: 1px dotted #333;
+        @include mq(pc_max) {
+          width: 90%;
+        }
+        @include mq(sp_1) {
+          display: block;
+          width: 100%;
+        }
+        &__date {
+          margin-right: 10%; 
+          .notice {
+            border: solid 1px #333;
+            border-radius: 50px 50px 50px 50px;
+            text-align: center;
+          }
+        }
+        &__txt {
+          .title {
+            font-size: 1.5rem;
+            @include mq(sp_1) {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+      &__btn {
+        display: block;
+        text-align: right;
+        padding: 10% 0 10% 0; 
+        p {
+          color: $main-blue;
+          display: inline;
+          position: relative;
+          width: 100%;
+          font-size: 1.3rem;
+          font-weight: 700;
+          -webkit-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          &::after {
+            position: absolute;
+            content: "";
+            top: 30px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            -webkit-transform: scale(0,0);
+                -ms-transform: scale(0,0);
+                    transform: scale(0,0);
+            background: $main-blue;
+          }
+          &:hover {
+            opacity: 0.7;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+          }
+          &:hover::after {
+            -webkit-transform: scale(1,1);
+                -ms-transform: scale(1,1);
+                    transform: scale(1,1);
+          }
+        }
+      }
+    }    
+  }
+}
+
+//About-top
+.about-top {
+  &-wrapper {
+    height: 100%;
+    margin-bottom: 14rem;
+    @include mq(sp_1) {
+      margin-bottom: 9rem;
+    }
+    &__ttl {
+      color: $main-blue;
+      p {
+        color: $main-blue;
+      }
+      .ttl-main {
+        border-bottom: 3px solid $main-blue;
+        @include mq(sp_2) {
+            width: 12rem;
+          }
+        }
+      }
+      &__con {
+        width: 100%;
+        height: 100%;
+        &__box {
+          width: 70%;
+          border: 4px solid $main-blue;
+          -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+                  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+          background-color: #fff;
+          position: relative;
+          z-index: 0;
+          @include mq(tab) {
+            width: 80%;
+          }
+          @include mq(sp_1) {
+            width: 80%;
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            top: 50px;
+            left: 100px;
+            width: 100%;
+            height: 100%;
+            border: 4px solid $main-blue;
+            background-color: $main-blue;
+            z-index: -5;
+            @include mq(tab) {
+                top: 45px;
+                left: 3em;
+            }
+            @include mq(sp_1) {
+              top: 45px;
+              left: 50px;
+              width: 90%;
+            }
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            top: 100px;
+            left: 200px;
+            width: 100%;
+            height: 100%;
+            border: 4px solid $main-blue;
+            background-color: $grey-sub;
+            z-index: -10;
+            @include mq(tab) {
+                top: 100px;
+                left: 6em;
+            }
+            @include mq(sp_1) {
+                top: 95px;
+                left: 80px;
+                width: 90%;
+            }
+          }
+          &__ttl {
+            padding: 5% 0 5% 5%;
+            background-color: #fff;
+            h3 {
+              font-size: 1.5rem;
+              font-weight: 700;
+            }
+          }
+          &__txt {
+            background-color: #fff;
+            padding: 0 5% 5% 5%;
+            p {
+              margin-bottom: 5%;
+            }
+          }
+          &__btn {
+            display: block;
+            text-align: right;
+            padding: 0 5% 5% 0;
+            background-color: #fff;
+            p {
+              color: $main-blue;
+              display: inline;
+              position: relative;
+              width: 100%;
+              font-size: 1.3rem;
+              font-weight: 700;
+              -webkit-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
+              &::after {
+                position: absolute;
+                content: "";
+                top: 30px;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                -webkit-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+                -webkit-transform: scale(0,0);
+                    -ms-transform: scale(0,0);
+                        transform: scale(0,0);
+                background: $main-blue;
+              }
+              &:hover {
+                opacity: 0.7;
+                -webkit-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+              }
+              &:hover::after {
+                -webkit-transform: scale(1,1);
+                  -ms-transform: scale(1,1);
+                      transform: scale(1,1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

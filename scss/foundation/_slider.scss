@@ -1,0 +1,49 @@
+@use "../global" as *;
+
+//swiper
+.swiper {
+  width: 100%;
+  height: 100%;
+  &-pagination {
+    &-bullet-active {
+      background-color: #fff !important;
+    }
+  }
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+  overflow:hidden;
+  @include mq(sp_1) {
+    margin-bottom: 30px;
+  }
+  & .works-top-wrapper__con__box {
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+.swiper-slide-active .works-top-wrapper__con__box {
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.swiper-slide-next .works-top-wrapper__con__box,
+.swiper-slide-prev .works-top-wrapper__con__box {
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}

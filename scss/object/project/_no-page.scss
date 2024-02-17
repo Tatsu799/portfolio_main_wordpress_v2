@@ -1,0 +1,52 @@
+@use "../../global" as *;
+
+.no-page {
+  height: 100vh;
+  padding: 100px 0 0 0;
+  &-wrapper {
+    .__breadcrumb {
+      display: inline-block;
+      margin: 5% 0 0 4%;
+  }
+  &__ttl {
+    position: relative;
+    width: 90%;
+    font-size: 2rem;
+    margin: 10% 0 0 5%;
+    @include mq(sp_1) {
+      font-size: 1.5rem;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        top: 90px;
+        left: 0;
+        width: 35rem;
+        border-bottom: solid 1px #333;
+        @include mq(tab) {
+          width: 100%;
+        }
+        @include mq(sp_1) {
+          width: 100%;
+          top: 70px;
+        }
+      }
+      span {
+        display: block;
+        font-size: 0.8rem;
+      }
+    }
+    &__txt {
+      margin: 2% 0 0% 5%;
+      @include mq(sp_1) {
+        font-size: 0.8rem;
+      }
+      a {
+        border-bottom: solid 1px #333;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

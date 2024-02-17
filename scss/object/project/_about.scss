@@ -1,0 +1,93 @@
+@use "../../global" as *;
+
+.about {
+  padding-top: 105px;
+  @include mq(sp_1) {
+    padding-top: 85px;
+  }
+  &-wrapper {
+    position: relative;
+    &__ttl {
+      width: 100%;
+      margin: 0 0 15% 0;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 23%;
+        width: 89.5%;
+        height: 100%;
+        padding: 0 0 10% 0;
+        background-color: $main-blue;
+        margin: 0 auto;
+        -webkit-clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 15% 50%, 0% 0%);
+                clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 15% 50%, 0% 0%);
+        @include mq(pc_max) {
+          left: 39.5%;
+          width: 69.5%;
+        }
+        @include mq(tab) {
+          left: 50%;
+          width: 55.5%;
+        }
+        @include mq(sp_1) {
+          left: 70%;
+          width: 35.5%;
+        }
+        @include mq(sp_2) {
+          left: 75%;
+          width: 30.5%;
+        }
+      }
+      .ttl {
+        color: $main-blue;
+      }
+      .ttl-main {
+        border-bottom: 3px solid $main-blue;
+      }
+    }
+    &__con {
+      width: 100%;
+      margin-bottom: 10%;
+      .name {
+        border-bottom: 1px solid #333;
+        padding: 0 0 3% 2%;
+        font-weight: 800;
+      }
+      &__box { 
+        display: -webkit-box; 
+        display: -ms-flexbox; 
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border-bottom: 1px solid #333;
+        margin: 0 auto;
+        padding: 3% 0 3% 2%;
+        @include mq(sp_1) {
+          display: block;
+        }
+        h3 {
+          width: 20%;
+          font-weight: 800;
+          @include mq(sp_1) {
+              width: 100%;
+          }
+        }
+        .txt {
+          width: 50%;
+          @include mq(pc_max) {
+            width: 100%;
+            margin: 0 0 0 22%;
+          }
+          @include mq(sp_1) {
+            width: 95%;
+            margin:0 auto;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

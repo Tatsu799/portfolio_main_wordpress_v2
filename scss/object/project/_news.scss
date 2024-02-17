@@ -1,0 +1,139 @@
+@use "../../global" as *;
+
+.news {
+  padding-top: 105px;
+  @include mq(sp_1) {
+    padding-top: 85px;
+  }
+  &-wrapper {
+    position: relative;
+    &__ttl {
+      width: 100%;
+      margin: 0 0 15% 0;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 23%;
+        width: 89.5%;
+        height: 100%;
+        padding: 0 0 10% 0;
+        background-color: $main-blue;
+        margin: 0 auto;
+        -webkit-clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 15% 50%, 0% 0%);
+                clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 15% 50%, 0% 0%);
+        @include mq(pc_max) {
+          left: 39.5%;
+          width: 69.5%;
+        }
+        @include mq(tab) {
+          left: 50%;
+          width: 55.5%;
+        }
+        @include mq(sp_1) {
+          left: 70%;
+          width: 35.5%;
+        }
+        @include mq(sp_2) {
+          left: 75%;
+          width: 30.5%;
+        }
+      }
+      .ttl {
+        color: $main-blue;
+      }
+      .ttl-main {
+        border-bottom: 3px solid $main-blue;
+      }
+    }
+    &__con {
+      &__ttl {
+        font-size: 2rem;
+        color: $main-blue;
+      }
+      &__cont {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+                align-items: baseline;
+        width: 80%;
+        padding: 3% 0 1% 0;
+        margin: 0 auto;
+        border-bottom: 1px dotted #333;
+        @include mq(pc_max) {
+          width: 90%;
+        }
+        @include mq(sp_1) {
+          display: block;
+          width: 100%;
+        }
+        &__date {
+          margin-right: 10%; 
+          .notice {
+            border: solid 1px #333;
+            border-radius: 50px 50px 50px 50px;
+            text-align: center;
+          }
+        }
+        &__txt {
+          .title {
+            font-size: 1.5rem;
+            @include mq(sp_1) {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+    .pagination {
+      height: 10%;
+      max-width: 100%;
+      margin: 5% 0 10% 0;
+      padding: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      a,
+      span {
+        font-size: 1rem;
+        width: 1.5em;
+        background-color: #fff;
+        border: solid 1px $main-blue;
+        margin: 0.5rem 0.5rem;
+        text-align: center;
+        line-height: 3em;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        @include mq(sp_1) {
+          font-size: 0.8rem;
+          margin: 0.4rem 0.4rem;
+        }
+        @include mq(sp_2) {
+          padding: 0.2rem 0.2rem;
+        }
+        &:hover {
+          opacity: 0.5;
+          background-color: $main-blue;
+          color: #fff;
+          -webkit-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+        }
+      }
+      span.page-numbers.current {
+        background-color: $main-blue;
+        color: #fff;
+      }
+    }
+  }
+}
