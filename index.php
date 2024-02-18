@@ -28,7 +28,7 @@
             <h2 class="ttl-main" data-en="Works"><span>WORKS</span></h2>
           </div>
         </div>
-        <div class="swiper">
+        <div class="swiper swiper_1">
           <div class="swiper-wrapper">
             <?php
               $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

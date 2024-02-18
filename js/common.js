@@ -44,7 +44,7 @@ function navMenu() {
 navMenu();
 
 //swiper
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper_1', {
   loop: true,
   autoplay: true,
   centeredSlides: true,
@@ -52,7 +52,7 @@ const swiper = new Swiper('.swiper', {
   speed: 1500,
   breakpoints: {
     768: {
-      slidesPerView: 2,
+      slidesPerView: 1.5,
     },
     1024: {
       slidesPerView: 3,
@@ -67,12 +67,12 @@ const gallery = new Swiper('.gallery', {
   loop: true,
   autoplay: true,
   centeredSlides: true,
-  autoHeight: true,
+  autoHeight: false,
   slidesPerView: 1,
   speed: 2000,
   breakpoints: {
     768: {
-      slidesPerView: 2,
+      slidesPerView: 1.5,
     },
     1024: {
       slidesPerView: 3,

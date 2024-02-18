@@ -60,11 +60,11 @@
           </div>
           <div class="swiper gallery">
             <div class="swiper-wrapper">
-              <img class="swiper-slide" src="<?php the_field('img-1')?>" alt="demo-image">
-              <img class="swiper-slide" src="<?php the_field('img-2')?>" alt="demo-image">
-              <img class="swiper-slide" src="<?php the_field('img-3')?>" alt="demo-image">
-              <img class="swiper-slide" src="<?php the_field('img-4')?>" alt="demo-image">
-              <img class="swiper-slide" src="<?php the_field('img-5')?>" alt="demo-image">
+              <div class="swiper-slide"><img src="<?php the_field('img-1')?>" alt="demo-image"></div>
+              <div class="swiper-slide"><img src="<?php the_field('img-2')?>" alt="demo-image"></div>
+              <div class="swiper-slide"><img src="<?php the_field('img-3')?>" alt="demo-image"></div>
+              <div class="swiper-slide"><img src="<?php the_field('img-4')?>" alt="demo-image"></div>
+              <div class="swiper-slide"><img src="<?php the_field('img-5')?>" alt="demo-image"></div>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@
             <?php next_post_link('%link', '＞ 次へ', TRUE); ?>
           <?php endif;?>
         </div>
-      </div>
+      </img>
     </section>
     <?php get_template_part( 'template-parts/contact-top' ); ?>
   </main>

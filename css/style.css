@@ -2237,38 +2237,30 @@ header .drawer {
 }
 .works-detail-wrapper__gallery .swiper {
   width: 100%;
-  height: 100%;
-}
-.works-detail-wrapper__gallery .swiper .gallery {
-  width: 100%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  overflow: hidden;
+  height: auto;
 }
 .works-detail-wrapper__gallery .swiper-wrapper {
   width: 100%;
   height: 100% !important;
   margin: 0 0 5px 0;
 }
-.works-detail-wrapper__gallery .swiper-wrapper img {
-  width: 100%;
-  height: 100% !important;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-}
 .works-detail-wrapper__gallery .swiper-slide {
   width: 100%;
-  height: 100%;
+  height: auto;
   margin: 0 5px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 @media screen and (max-width: 480px) {
   .works-detail-wrapper__gallery .swiper-slide {
     margin: 0;
   }
+}
+.works-detail-wrapper__gallery .swiper-slide img {
+  width: 100%;
+  height: 100% !important;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .news {
