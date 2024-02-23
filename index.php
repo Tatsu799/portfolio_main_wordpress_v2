@@ -18,6 +18,7 @@
           </h1>
           <p class="txt-1">Web Design</p>
         </div>
+        <p class="scroll-text">SCROLL</p>
       </div>
     </section>
     <section class="works-top" id="works-top">

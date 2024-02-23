@@ -572,6 +572,50 @@ li {
     transform: translateX(0);
   }
 }
+.scroll-text {
+  display: inline-block;
+  position: absolute;
+  bottom: 100px;
+  left: 48%;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font-size: 0.8rem;
+  color: #333;
+}
+.scroll-text::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 60px;
+  width: 80px;
+  height: 2px;
+  background-color: #333;
+  animation-name: scrollAnime;
+  animation-duration: 1.2s;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes scrollAnime {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 80px;
+  }
+}
+@keyframes scrollAnime {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 80px;
+  }
+}
 .swiper {
   width: 100%;
   height: 100%;
@@ -1137,6 +1181,7 @@ header .drawer {
 }
 
 .top-wrapper {
+  position: relative;
   width: 100%;
   height: 100%;
 }
